@@ -13,6 +13,9 @@ avg_rating_per_neighborhood = df.groupby("neighbourhood")["price"].mean().reset_
 avg_rating_per_neighborhood.sort_values(by="price", ascending=False)
 print(avg_rating_per_neighborhood.sort_values(by="price", ascending=False))
 
+# Save the average price per neighborhood to a CSV file
+avg_rating_per_neighborhood.to_csv("data/derived/average_price_per_neighborhood.csv", index=False)
+
 # Plot the price of all hotels on a histogram and save it to a file
 plt.hist(df["price"], bins=50)
 plt.xlabel("Price")
