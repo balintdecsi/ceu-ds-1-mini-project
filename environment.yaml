@@ -1,0 +1,5 @@
+name: ceu-ds-1-mini-project
+channels:
+  - conda-forge
+dependencies:
+  - pandas
